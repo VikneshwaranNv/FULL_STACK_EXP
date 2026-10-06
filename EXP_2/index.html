@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vikneshwaran N | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Main container */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            padding: 30px 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* Profile image */
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #6d9fc5;
+            padding: 4px;
+        }
+
+        /* Header information */
+
+        .header-info h1 {
+            font-size: 32px;
+            color: #527da6;
+            margin-bottom: 3px;
+        }
+
+        .header-info h2 {
+            font-size: 21px;
+            font-weight: normal;
+            color: #777;
+            margin-bottom: 2px;
+        }
+
+        .college {
+            font-size: 17px;
+            color: #777;
+            margin-bottom: 12px;
+        }
+
+        /* Skill badges */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill {
+            padding: 5px 11px;
+            border-radius: 6px;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .html {
+            background: #6c91b0;
+        }
+
+        .css {
+            background: #65a28f;
+        }
+
+        .bootstrap {
+            background: #b49a59;
+        }
+
+        .python {
+            background: #4f88b2;
+        }
+
+        .c {
+            background: #bd7180;
+        }
+
+        .mysql {
+            background: #555;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #4f83aa;
+        }
+
+        /* ================= SECTION HEADINGS ================= */
+
+        .section-title {
+            color: white;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+
+            background: #6596bd;
+
+            border-radius: 0 45px 45px 0;
+        }
+
+        .green-title {
+            background: #50a18d;
+            border-radius: 0 45px 45px 0;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            margin-bottom: 35px;
+        }
+
+        .about p {
+            font-size: 16px;
+            margin: 8px 20px;
+        }
+
+        .about strong {
+            color: #444;
+        }
+
+        /* ================= TWO COLUMN ================= */
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* ================= PERSONAL INFORMATION ================= */
+
+        .personal-info {
+            padding: 0 20px;
+        }
+
+        .info-row {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .info-row strong {
+            color: #444;
+        }
+
+        .info-row a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .info-row a:hover {
+            color: #4e85ad;
+        }
+
+        /* ================= EDUCATION ================= */
+
+        .education {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px 10px;
+            text-align: left;
+            vertical-align: top;
+            font-size: 15px;
+        }
+
+        th {
+            color: #555;
+            font-weight: bold;
+        }
+
+        td {
+            color: #555;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 13px 20px;
+            font-size: 16px;
+        }
+
+        .contact-icon {
+            width: 25px;
+            text-align: center;
+            font-size: 19px;
+            color: #555;
+        }
+
+        .contact-item strong {
+            color: #444;
+        }
+
+        .contact-item a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #4f85ac;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            color: #888;
+            font-size: 13px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 130px;
+                height: 130px;
+            }
+
+            .header-info h1 {
+                font-size: 27px;
+            }
+
+            .header-info h2 {
+                font-size: 18px;
+            }
+
+            .skills {
+                justify-content: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .about p {
+                text-align: left;
+            }
+
+            .section-title {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .container {
+                width: 94%;
+            }
+
+            .profile-image {
+                width: 115px;
+                height: 115px;
+            }
+
+            .header-info h1 {
+                font-size: 24px;
+            }
+
+            .header-info h2 {
+                font-size: 16px;
+            }
+
+            .college {
+                font-size: 14px;
+            }
+
+            .about p,
+            .info-row,
+            .contact-item {
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <!-- Replace profile.jpg with your actual photo -->
+            <img src="profile.jpg"
+                 alt="Vikneshwaran N"
+                 class="profile-image">
+
+            <div class="header-info">
+
+                <h1>Vikneshwaran N</h1>
+
+                <h2>B.Tech Information Technology</h2>
+
+                <div class="college">
+                    Kongu Engineering College
+                </div>
+
+                <div class="skills">
+
+                    <span class="skill html">HTML</span>
+
+                    <span class="skill css">CSS</span>
+
+                    <span class="skill bootstrap">Bootstrap</span>
+
+                    <span class="skill python">Python</span>
+
+                    <span class="skill c">C</span>
+
+                    <span class="skill mysql">MySQL</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#personal">Personal Information</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="section-title">
+            About Me
+        </div>
+
+        <p>
+            I am <strong>Vikneshwaran N</strong>, currently pursuing
+            B.Tech Information Technology at
+            <strong>Kongu Engineering College.</strong>
+        </p>
+
+        <p>
+            I am passionate about Web Development, Cloud Computing,
+            Artificial Intelligence, and Software Development.
+        </p>
+
+        <p>
+            My goal is to become a skilled Full Stack Developer and
+            build innovative applications that solve real-world
+            problems.
+        </p>
+
+    </section>
+
+
+    <!-- ================= PERSONAL + EDUCATION ================= -->
+
+    <div class="two-column">
+
+        <!-- PERSONAL INFORMATION -->
+
+        <section id="personal">
+
+            <div class="section-title">
+                Personal Information
+            </div>
+
+            <div class="personal-info">
+
+                <div class="info-row">
+                    <strong>Name :</strong>
+                    Vikneshwaran N
+                </div>
+
+                <div class="info-row">
+                    <strong>Degree :</strong>
+                    B.Tech Information Technology
+                </div>
+
+                <div class="info-row">
+                    <strong>College :</strong>
+                    Kongu Engineering College
+                </div>
+
+                <div class="info-row">
+                    <strong>Email :</strong>
+                    nvikneshwaran1@gmail.com
+                </div>
+
+                <div class="info-row">
+                    <strong>Location :</strong>
+                    Tamil Nadu, India
+                </div>
+
+                <div class="info-row">
+                    <strong>Languages :</strong>
+                    Tamil, English, Spanish
+                </div>
+
+                <div class="info-row">
+                    <strong>GitHub :</strong>
+                    <a href="https://github.com/VikneshwaranNv"
+                       target="_blank">
+                        github.com/VikneshwaranNv
+                    </a>
+                </div>
+
+                <div class="info-row">
+                    <strong>LinkedIn :</strong>
+                    <a href="https://www.linkedin.com/in/vikneshwaran-nagarajan-85b417315"
+                       target="_blank">
+                        linkedin.com/in/vikneshwaran-nagarajan-85b417315
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EDUCATION -->
+
+        <section class="education" id="education">
+
+            <div class="section-title green-title">
+                Education
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Course</th>
+                        <th>Institution</th>
+                        <th>Year</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            B.Tech Information Technology
+                        </td>
+
+                        <td>
+                            Kongu Engineering College
+                        </td>
+
+                        <td>
+                            2026
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Higher Secondary (HSC)
+                        </td>
+
+                        <td>
+                            Oxford Matric Higher Secondary School
+                        </td>
+
+                        <td>
+                            2022
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            SSLC
+                        </td>
+
+                        <td>
+                            Oxford Matric Higher Secondary School
+                        </td>
+
+                        <td>
+                            2020
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </div>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+            Contact Me
+        </div>
+
+        <div class="contact-item">
+
+            <span class="contact-icon">✉</span>
+
+            <span>
+                <strong>Email :</strong>
+                nvikneshwaran1@gmail.com
+            </span>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <span class="contact-icon">☎</span>
+
+            <span>
+                <strong>Phone :</strong>
+                +91 6374730547
+            </span>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <span class="contact-icon">◉</span>
+
+            <span>
+                <strong>GitHub :</strong>
+
+                <a href="https://github.com/VikneshwaranNv"
+                   target="_blank">
+                    github.com/VikneshwaranNv
+                </a>
+            </span>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <span class="contact-icon">in</span>
+
+            <span>
+                <strong>LinkedIn :</strong>
+
+                <a href="https://www.linkedin.com/in/vikneshwaran-nagarajan-85b417315"
+                   target="_blank">
+                    linkedin.com/in/vikneshwaran-nagarajan-85b417315
+                </a>
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Vikneshwaran N | Portfolio
+
+    </footer>
+
+</div>
+
+</body>
+</html>
