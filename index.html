@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikneshwaran N - Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            background-color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 30px 0 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #333;
+        }
+
+        header p {
+            margin-top: 12px;
+            font-size: 14px;
+            font-style: italic;
+            color: #777;
+        }
+
+        nav {
+            margin-top: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+            margin: 0 8px;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        /* Sections */
+        section {
+            margin-top: 45px;
+        }
+
+        section h2 {
+            font-size: 21px;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
+        /* About */
+        .about-top {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .profile-photo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            object-fit: cover;
+        }
+
+        .photo-name {
+            margin-top: 10px;
+            font-style: italic;
+            color: #777;
+        }
+
+        .about-text {
+            font-size: 14px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* Skills */
+        .skills ul {
+            padding-left: 25px;
+        }
+
+        .skills li {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        /* Education */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            padding: 15px 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            color: #555;
+            font-weight: bold;
+        }
+
+        td {
+            color: #444;
+        }
+
+        /* Projects */
+        .project h3 {
+            font-size: 16px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .project p {
+            font-size: 14px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* Contact */
+        .contact-form {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 0;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-bottom: 1px solid #555;
+        }
+
+        button {
+            padding: 10px 25px;
+            background-color: #444;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #222;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            section {
+                margin-top: 35px;
+            }
+
+            th,
+            td {
+                font-size: 12px;
+                padding: 10px 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>Vikneshwaran N</h1>
+
+            <p>
+                B.Tech Information Technology Student | Full Stack Web Developer
+            </p>
+
+            <nav>
+                <a href="#about">About</a> |
+                <a href="#skills">Skills</a> |
+                <a href="#education">Education</a> |
+                <a href="#projects">Projects</a> |
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+
+        <!-- About -->
+        <section id="about">
+
+            <h2>About Me</h2>
+
+            <div class="about-top">
+
+                <!-- Replace profile.jpg with your photo -->
+                <img src="profile.jpg"
+                     alt="Profile Photo"
+                     class="profile-photo">
+
+                <div class="photo-name">
+                    Vikneshwaran N
+                </div>
+
+            </div>
+
+            <p class="about-text">
+                Hello! I am Vikneshwaran N, a passionate B.Tech Information
+                Technology student studying at Kongu Engineering College.
+                I am interested in Full Stack Development, Web Technologies,
+                Mobile App Development, and Software Engineering. I enjoy
+                building real-world projects and continuously improving my
+                programming skills.
+            </p>
+
+        </section>
+
+
+        <!-- Skills -->
+        <section id="skills" class="skills">
+
+            <h2>Technical Skills</h2>
+
+            <ul>
+                <li>
+                    <strong>Programming Languages:</strong>
+                    C, C++, Python
+                </li>
+
+                <li>
+                    <strong>Web Technologies:</strong>
+                    HTML5, CSS3
+                </li>
+
+                <li>
+                    <strong>Database:</strong>
+                    MySQL
+                </li>
+
+                <li>
+                    <strong>Mobile Development:</strong>
+                    Flutter (Basics)
+                </li>
+
+                <li>
+                    <strong>Tools:</strong>
+                    VS Code, Git, GitHub
+                </li>
+
+                <li>
+                    <strong>Area of Interest:</strong>
+                    Full Stack Development
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- Education -->
+        <section id="education">
+
+            <h2>Education</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Institution</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>B.Tech Information Technology</td>
+                        <td>Kongu Engineering College</td>
+                        <td>2026</td>
+                    </tr>
+
+                    <tr>
+                        <td>Higher Secondary Education</td>
+                        <td>Oxford Matric Higher Secondary School</td>
+                        <td>2022</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- Projects -->
+        <section id="projects">
+
+            <h2>Projects</h2>
+
+            <div class="project">
+
+                <h3>Code Kathai</h3>
+
+                <p>
+                    A learning application that teaches programming concepts
+                    using Tamil storytelling, visual illustrations, practice
+                    questions and quizzes. The application makes programming
+                    easier and more engaging for beginners.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact -->
+        <section id="contact">
+
+            <h2>Contact Me</h2>
+
+            <form class="contact-form">
+
+                <div class="form-group">
+                    <label for="name">Name:</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Write your message"
+                    ></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </section>
+
+
+        <footer>
+            © 2026 Vikneshwaran N. All Rights Reserved.
+        </footer>
+
+    </div>
+
+</body>
+</html>
